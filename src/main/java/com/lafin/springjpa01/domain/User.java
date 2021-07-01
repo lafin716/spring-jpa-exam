@@ -20,7 +20,6 @@ import java.util.List;
 @Entity
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
-//@Table(name = "user", indexes = { @Index(columnList = "name") }, uniqueConstraints = {@UniqueConstraint( columnNames = {"email"} )})
 @EntityListeners(value = { UserEntityListener.class })
 public class User extends BaseEntity {
     @Id
@@ -33,21 +32,5 @@ public class User extends BaseEntity {
 
     @Enumerated(value = EnumType.STRING)
     private Gender gender;
-
-//    @Column(updatable = false)
-//    @CreatedDate
-//    private LocalDateTime createdAt;
-//
-//    @Column(insertable = false)
-//    @LastModifiedDate
-//    private LocalDateTime updatedAt;
-//
-//    @OneToMany(fetch = FetchType.EAGER)
-//    private List<Address> address;
-
-    // 디비의 영속성에 추가되지 않는다
-//    @Transient
-//    private String testData;
-
 
 }

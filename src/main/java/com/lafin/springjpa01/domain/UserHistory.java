@@ -20,19 +20,15 @@ import java.time.LocalDateTime;
 @Data
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = true)
-//@EntityListeners(value = AuditingEntityListener.class)
 public class UserHistory extends BaseEntity {
     @Id
     @GeneratedValue
     private Long id;
 
     private Long userId;
-    private String name;
-    private String email;
 
-//    @CreatedDate
-//    private LocalDateTime createdAt;
-//    @LastModifiedDate
-//    private LocalDateTime updatedAt;
+    private String name;
+
+    private String email;
 
 }
